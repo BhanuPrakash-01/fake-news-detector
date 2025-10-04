@@ -1,0 +1,31 @@
+# Web Framework
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+pydantic==2.5.3
+pydantic-settings==2.1.0
+
+# CORS (for frontend-backend communication)
+python-multipart==0.0.6
+
+# Machine Learning
+# torch==2.1.2
+transformers==4.36.2
+huggingface-hub==0.20.2
+
+# Data Processing
+numpy==1.26.3
+pandas==2.1.4
+
+# HTTP Requests (for external APIs)
+httpx==0.26.0
+requests==2.31.0
+
+# Environment Variables
+python-dotenv==1.0.0
+
+# Testing (optional but recommended)
+pytest==7.4.4
+pytest-asyncio==0.23.3
+
+# Logging
+loguru==0.7.2

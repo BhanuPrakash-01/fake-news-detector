@@ -1,0 +1,24 @@
+services:
+  # Backend API Service
+  - type: web
+    name: fake-news-detector-api
+    runtime: python
+    buildCommand: |
+      cd server
+      pip install --upgrade pip
+      pip install -r requirements-prod.txt
+    startCommand: |
+      cd server
+      uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.0
+      - key: ENVIRONMENT
+        value: production
+      - key: MODEL_NAME
+        value: hamzab/roberta-fake-news-classification
+      - key: GOOGLE_FACT_CHECK_API_KEY
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
+    healthCheckPath: /health
