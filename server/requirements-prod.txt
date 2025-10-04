@@ -6,7 +6,7 @@ pydantic-settings==2.1.0
 python-multipart==0.0.6
 
 # ML - CPU only for deployment
-torch==2.1.2
+torch==2.5.0
 transformers==4.36.2
 huggingface-hub==0.20.2
 
